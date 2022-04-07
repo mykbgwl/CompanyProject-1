@@ -1,9 +1,10 @@
 package com.model;
 
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
-public interface BookingDAO {
-	public Payment makePayment(int id);
-	public Booking cancelBooking(int id);
+@Repository
+public interface BookingDAO extends CrudRepository<Booking,Integer> {
+
 }

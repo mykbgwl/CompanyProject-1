@@ -13,6 +13,7 @@ public class Booking {
 	private Date bookingDate;
 	private Date travelDate;
 	private double totalCost;
+	@OneToOne
 	private Flight flightBooked;
 	public Booking() {
 		

@@ -3,7 +3,7 @@ package com.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="UserTable")
+@Table(name="Users")
 public class User {
 	@Id
 	@GeneratedValue
@@ -13,6 +13,7 @@ public class User {
 	private String firstName;
 	private String lastName;
 	private String email;
+	@OneToOne
 	private Contact contact;
 	public User() {
 		
