@@ -4,13 +4,17 @@ import java.sql.Date;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 public class Booking {
 	@Id
 	@GeneratedValue
 	private int id;
 	private long bookingNumber;
+	@JsonFormat(pattern="dd-MM-yyyy")
 	private Date bookingDate;
+	@JsonFormat(pattern="dd-MM-yyyy")
 	private Date travelDate;
 	private double totalCost;
 	@OneToOne

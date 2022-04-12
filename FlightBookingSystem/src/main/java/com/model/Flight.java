@@ -1,7 +1,7 @@
 package com.model;
 
 import java.sql.Date;
-
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -14,8 +14,8 @@ public class Flight {
 	private int id;
 	private String departureLocation;
 	private String arrivalLocation;
-	@OneToOne
-	private Fleet fleet;
+	@OneToMany(cascade=CascadeType.MERGE)
+	private List<Fleet> fleetList;
 	@OneToOne
 	private FlightStatus status;
 	@JsonFormat(pattern="dd-MM-yyyy")
@@ -41,11 +41,12 @@ public class Flight {
 	public void setArrivalLocation(String arrivalLocation) {
 		this.arrivalLocation = arrivalLocation;
 	}
-	public Fleet getFleet() {
-		return fleet;
+	
+	public List<Fleet> getFleetList() {
+		return fleetList;
 	}
-	public void setFleet(Fleet fleet) {
-		this.fleet = fleet;
+	public void setFleetList(List<Fleet> fleetList) {
+		this.fleetList = fleetList;
 	}
 	public FlightStatus getStatus() {
 		return status;

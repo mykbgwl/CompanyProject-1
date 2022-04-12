@@ -12,6 +12,8 @@ public class Fleet {
 	private int totalEconomySeats;
 	private int totalPremiumSeats;
 	private int totalBusinessSeats;
+	
+	
 	public Fleet() {}
 	public int getId() {
 		return id;

@@ -17,9 +17,9 @@ public class BookingController {
 	BookingDAO bookingDAO;
 	@Autowired
 	PaymentDAO paymentDAO;
-	@DeleteMapping("/cancelbooking")
-	public String cancelBooking(@RequestBody Booking b) {
-		bookingDAO.delete(b);
+	@DeleteMapping("/cancelbooking/{id}")
+	public String cancelBooking(@RequestBody int id) {
+		bookingDAO.deleteById(id);
 		return "booking cancelled";
 	}
 	

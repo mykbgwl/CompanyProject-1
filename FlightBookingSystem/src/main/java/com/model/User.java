@@ -15,9 +15,11 @@ public class User {
 	private String email;
 	@OneToOne
 	private Contact contact;
+	
 	public User() {
 		
 	}
+	
 	public int getId() {
 		return id;
 	}

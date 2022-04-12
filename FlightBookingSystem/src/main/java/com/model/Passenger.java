@@ -1,18 +1,18 @@
 package com.model;
 
+
 import javax.persistence.*;
 
 @Entity
-public class Passenger {
+public class Passenger{
 	@Id
 	@GeneratedValue
 	private int id;
-	private String firstName;
-	private String lastName;
 	private int age;
 	private char gender;
 	private String passportNo;
 	private String mealPref;
+	
 	public Passenger() {
 		
 	}
@@ -21,18 +21,6 @@ public class Passenger {
 	}
 	public void setId(int id) {
 		this.id = id;
-	}
-	public String getFirstName() {
-		return firstName;
-	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	public String getLastName() {
-		return lastName;
-	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
 	}
 	public int getAge() {
 		return age;
